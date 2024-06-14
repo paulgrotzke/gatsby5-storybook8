@@ -1,0 +1,38 @@
+{
+  "name": "gatsby5-storybook8",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby5-storybook8",
+  "author": "paul",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "gatsby": "^5.13.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@storybook/addon-essentials": "^8.1.9",
+    "@storybook/addon-links": "^8.1.9",
+    "@storybook/react": "^8.1.9",
+    "@storybook/react-webpack5": "^8.1.9",
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "storybook": "^8.1.9",
+    "typescript": "^5.3.3"
+  }
+}
