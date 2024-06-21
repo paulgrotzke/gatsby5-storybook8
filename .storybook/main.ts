@@ -5,9 +5,7 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: false,
   },
-  addons: [
-    "@storybook/addon-essentials",
-  ],
+  addons: ["@storybook/addon-essentials"],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
@@ -20,6 +18,10 @@ const config: StorybookConfig = {
         presets: ["@babel/preset-react", "@babel/preset-typescript"],
       },
     });
+
+    // modify storybook's file-loader rule only if you use inline svg
+    config.module.rules.find((r) => r.test.test(".svg")).exclude = /\.svg$/;
+    config.module.rules.push({ test: /\.svg$/, loader: "svg-react-loader" });
     return config;
   },
 };
